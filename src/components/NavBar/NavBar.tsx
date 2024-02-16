@@ -3,6 +3,17 @@ import { AppBar, Toolbar, Typography, Button, IconButton, InputBase, alpha } fro
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
+
+const buttonStlye ={
+    backgroundColor: '#E72A01',
+    color: 'white',
+    '&:hover': {
+        backgroundColor: '#E9664A',
+    },
+    margin: '0 5px'
+    
+}
+
 const NavBar = () => {
   return (
     <AppBar position="fixed" style={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
@@ -12,7 +23,7 @@ const NavBar = () => {
           { /* Add your logo here */}
         </IconButton>
         <Typography variant="h6" style={{ flexGrow: 1 }}>
-          Your Logo Here
+          Logo??
         </Typography>
         {/* Search bar */}
         <div style={{ position: 'relative', borderRadius: '4px', backgroundColor: '#ffffff', marginRight: '10px' }}>
@@ -20,13 +31,13 @@ const NavBar = () => {
             
           </div>
           <InputBase placeholder="Search..." style={{ color: 'black', paddingLeft: '20px' }} />
-          <Button sx={{backgroundColor:"red"}}><SearchIcon sx={{color:"white"}}/></Button>
+          <Button variant="contained" sx={{backgroundColor:"red"}}><SearchIcon sx={{color:"white"}}/></Button>
   
         </div>
         {/* Buttons on the right */}
-        <Button color="inherit">Write a Review</Button>
-        <Button color="inherit">Login</Button>
-        <Button color="inherit">Sign Up</Button>
+        <Button sx={buttonStlye} color="inherit">Write a Review</Button>
+        <Button sx={buttonStlye} color="inherit">Login</Button>
+        <Button sx={buttonStlye} color="inherit">Sign Up</Button>
       </Toolbar>
     </AppBar>
   );

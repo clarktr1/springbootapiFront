@@ -17,32 +17,32 @@ const overlayStyle = {
     left: 0,
     height: '100%',
     width: '100%',
-    backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3))', // Linear gradient from top to bottom
+    backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3))', 
   };
   
 
 const textPrimaryStyle = {
-  color: 'white', // Set text color to white
-  position: 'relative', // Ensure text appears above the overlay
-  zIndex: 1, // Set a higher z-index to ensure text appears above the overlay
+  color: 'white', 
+  position: 'relative', 
+  zIndex: 1, 
 };
 
 const textSecondaryStyle = {
-  color: 'white', // Set text color to white
-  position: 'relative', // Ensure text appears above the overlay
-  zIndex: 1, // Set a higher z-index to ensure text appears above the overlay
-};
+  color: 'white',
+  position: 'relative',
+  zIndex: 1, 
+}
 
 const HeroContainer = () => {
   return (
-    <div style={containerStyle}>
-      <div style={overlayStyle} />
+    <Container maxWidth="xl" sx={containerStyle}>
+      <Container maxWidth="xl" sx={overlayStyle} />
       <Container maxWidth="sm">
-        {/* Text elements placed after the overlay */}
-        <Typography variant="h2" align="center" style={textPrimaryStyle} gutterBottom>
+    
+        <Typography variant="h2" align="center" sx={textPrimaryStyle} gutterBottom>
           Welcome to My Website
         </Typography>
-        <Typography variant="h5" align="center" style={textSecondaryStyle} paragraph>
+        <Typography variant="h5" align="center" sx={textSecondaryStyle} paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
           Sed nisi.
         </Typography>
@@ -61,7 +61,7 @@ const HeroContainer = () => {
           </Grid>
         </div>
       </Container>
-    </div>
+    </Container>
   );
 };
 

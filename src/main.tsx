@@ -5,6 +5,6 @@ import App from './App.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App style={{margin:"0 0"}} />
+    <App />
   </React.StrictMode>,
 )
