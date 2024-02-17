@@ -1,5 +1,5 @@
 
-import { Container, Divider } from "@mui/material";
+import { Divider } from "@mui/material";
 import Footer from "../Footer/Footer";
 import GenreContainer from "../Genres/GenreContainer";
 import HeroContainer from "../Hero/HeroContainer";

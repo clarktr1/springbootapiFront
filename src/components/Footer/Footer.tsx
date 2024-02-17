@@ -1,5 +1,4 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, IconButton, Button, Divider, Link } from '@mui/material';
+import { AppBar, Toolbar, Typography, IconButton, Divider, Link } from '@mui/material';
 import { Facebook, Twitter, Instagram } from '@mui/icons-material';
 
 export default function Footer() {

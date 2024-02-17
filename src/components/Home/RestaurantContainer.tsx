@@ -1,5 +1,5 @@
-import { Container, Paper, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { Container, Typography } from "@mui/material";
+import{ useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 
 type Restaurant = {

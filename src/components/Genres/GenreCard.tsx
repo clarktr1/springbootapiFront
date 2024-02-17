@@ -1,9 +1,8 @@
-import React from 'react';
-import { Grid, Typography, Link, Paper, Card, CardContent, CardMedia, Button, CardActionArea } from '@mui/material';
+import {Typography,Card, CardContent, CardActionArea } from '@mui/material';
 
 
 
-const GenreCard = ({name, image, link}:any) => {
+const GenreCard = ({name, image}:any) => {
   return (
     
       <Card sx={{textAlign:"center", display:"flex", justifyContent:"center", alignContent:"center", flexWrap:"wrap", margin:"2rem", "&:hover": {
