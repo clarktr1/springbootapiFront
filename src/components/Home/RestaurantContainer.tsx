@@ -1,4 +1,4 @@
-import { Container, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import{ useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 
@@ -28,15 +28,18 @@ export default function RestaurantContainer() {
   }, []);
 
   return (
-    <Container sx={{ marginTop: "10dvh"}}>
-      <Typography variant="h3" align="center" gutterBottom sx={{ margin: "8dvh"}}>
-        Find a new restaurant
-      </Typography>
-      <Container sx={{ padding: "12px", display: "flex", justifyContent: "space-evenly" }}>
-        {rests.map((rest: Restaurant, index: number) => (
-          <RestaurantCard key={index} {...rest} />
-        ))}
-      </Container>
-    </Container>
+    <Grid container sx={{ marginTop: "10dvh" }} justifyContent="center">
+    <Typography variant="h3" align="center" gutterBottom sx={{ margin: "8dvh" }}>
+      Find a new restaurant
+    </Typography>
+    <Grid container spacing={2} justifyContent="space-around" lg={12} md={12} xl={12}>
+      {rests.map((rest: Restaurant, index: number) => (
+        <Grid key={index} item xs={12} sm={6} md={4} lg={3} xl={2}>
+          <RestaurantCard {...rest} />
+        </Grid>
+      ))}
+    </Grid>
+  </Grid>
+  
   );
 }

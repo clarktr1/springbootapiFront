@@ -19,7 +19,7 @@ export default function RestaurantCard({image, name, overallScore, genre} : Rest
   })();
 
   return (
-    <Card sx={{width:"20%", backgroundColor:"white", display: "flex", justifyContent:"center", alignItems:"center", borderRadius:"8px", border:"1px solid #00000050", padding:"0"}}>
+    <Card sx={{minWidth:"25%",backgroundColor:"white", display: "flex", justifyContent:"center", alignItems:"center", borderRadius:"8px", border:"1px solid #00000050", padding:"0"}}>
       <CardContent sx={{textAlign:"center"}}>
         <img width={200} height={150} src={image} alt={name}></img>
         <Typography sx={{marginTop:"2rem"}} variant='h4'>{name}</Typography>
