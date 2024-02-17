@@ -1,6 +1,7 @@
 
 import { Container, Typography, Button, Grid } from '@mui/material';
 import backgroundImage from '../../assets/foodhero.jpg'; // Import your background image
+import NavBar from '../NavBar/NavBar';
 
 const containerStyle = {
   position: 'relative',
@@ -17,7 +18,7 @@ const overlayStyle = {
     left: 0,
     height: '100%',
     width: '100%',
-    backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3))', 
+    backgroundImage: 'linear-gradient(to bottom, rgba(25,25,25,0.75), rgba(120,120,120,0.3))', 
   };
   
 
@@ -36,15 +37,15 @@ const textSecondaryStyle = {
 const HeroContainer = () => {
   return (
     <Container maxWidth="xl" sx={containerStyle}>
+      <NavBar/>
       <Container maxWidth="xl" sx={overlayStyle} />
       <Container maxWidth="sm">
     
         <Typography variant="h2" align="center" sx={textPrimaryStyle} gutterBottom>
-          Welcome to My Website
+          Ready to Explore?
         </Typography>
         <Typography variant="h5" align="center" sx={textSecondaryStyle} paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
-          Sed nisi.
+          Share Your Flavorful Journey: Discover, Review, and Share Experiences with the world!
         </Typography>
         <div style={{ marginTop: '4rem' }}>
           <Grid container spacing={2} justifyContent="center">
