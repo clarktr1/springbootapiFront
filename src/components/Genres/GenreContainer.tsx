@@ -21,7 +21,7 @@ const categories = [
 
 export default function GenreContainer(){
     return(
-        <Container maxWidth="lg" sx={{ marginTop: "10vh" }}>
+        <Container maxWidth="lg" sx={{ margin: "15vh auto" }}>
         <Typography variant="h3" align="center" gutterBottom sx={{ margin: "8vh" }}>
           Genres
         </Typography>
