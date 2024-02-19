@@ -8,9 +8,6 @@ import ChatIcon from '@mui/icons-material/Chat';
 function GenreLongCard({id, name, image, overallScore, index, peanutScore, dairyScore, eggScore}:any) {
 
     const [review, setReview] = useState("");
-
-    console.log(index);
-
     async function getReview(){
         const response = await fetch(`http://springbootback-production.up.railway.app/review/approved/restaurant_${id}`);
         const data = await response.json();
@@ -62,16 +59,16 @@ export default function GenreSearch(){
     const { genre } = useParams<{genre: string}>();
     
     async function getRestaurants(){
-        const response = await fetch(`http://localhost:15710/restaurants/genre/${genre}`);
+        const response = await fetch(`https://springbootback-production.up.railway.app/restaurants/genre/${genre}`);
         const data = await response.json();
         console.log(data);
         setRestaurants(data);
     }
 
-    function formatGenre(genre:any){
-        if(genre.endsWith("s"))
-        return genre.slice(0,genre.length-1).charAt(0).toUpperCase() + genre.slice(1,genre.length-1);
-    }
+    // function formatGenre(genre:any){
+    //     if(genre.endsWith("s"))
+    //     return genre.slice(0,genre.length-1).charAt(0).toUpperCase() + genre.slice(1,genre.length-1);
+    // }
 
     useEffect(() => {
         getRestaurants();
@@ -81,10 +78,10 @@ export default function GenreSearch(){
         <>
             <NavBarV2 />
             <Divider sx={{marginBottom:"8vh"}}/>
-            <Typography>{formatGenre(genre)}</Typography>
+            
             <Container sx={{minWidth:"100%", display:"flex"}}>
                 <FilterBar />
-                <Grid container lg={12} >
+                <Grid item lg={12} >
                     {restaurants.map((restaurant, index) => {
                         return <GenreLongCard key={index} index={++index} {...restaurant} />
                     })}

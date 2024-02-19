@@ -8,7 +8,8 @@ const containerStyle = {
   backgroundImage: `url(${backgroundImage})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  minHeight: '90vh', 
+  minWidth: '100%', 
+  minHeight: '84vh',
   padding: '8rem 0 6rem',
   display: 'flex',
   flexDirection: 'column',
@@ -41,7 +42,7 @@ const textSecondaryStyle = {
 
 const HeroContainer = () => {
   return (
-    <Container maxWidth="xl" sx={containerStyle}>
+    <Container sx={containerStyle}>
        <NavBar/>
       <Divider />
       <Container maxWidth="xl" sx={overlayStyle} />
