@@ -9,7 +9,7 @@ function GenreLongCard({id, name, image, overallScore, index, peanutScore, dairy
 
     const [review, setReview] = useState("");
     async function getReview(){
-        const response = await fetch(`http://springbootback-production.up.railway.app/review/approved/restaurant_${id}`);
+        const response = await fetch(`https://springbootback-production.up.railway.app/review/approved/restaurant_${id}`);
         const data = await response.json();
         console.log(data);
         setReview(data[0].commentary);
