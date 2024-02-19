@@ -16,8 +16,18 @@ export default function RestaurantContainer() {
     try {
       const response = await fetch("https://springbootback-production.up.railway.app/restaurants/all");
       const data = await response.json();
-      console.log(data);
-      setRests(data);
+      const selectedIndices = new Set();
+      const newArr = [];
+      
+      while (selectedIndices.size < 4) {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        if (!selectedIndices.has(randomIndex)) {
+          selectedIndices.add(randomIndex);
+          newArr.push(data[randomIndex]);
+        }
+      }
+      console.log(newArr);
+      setRests(newArr);
     } catch (e) {
       console.error(e);
     }

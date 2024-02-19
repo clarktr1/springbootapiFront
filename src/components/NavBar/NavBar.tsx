@@ -25,7 +25,7 @@ const loginStyle = {
 
 const NavBar = () => {
   return (
-    <AppBar position='absolute' style={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+    <AppBar position='absolute' style={{ backgroundColor: 'transparent', boxShadow: 'none', }}>
       <Toolbar>
         {/* Logo on the left */}
         <IconButton edge="start" color="inherit" aria-label="menu">

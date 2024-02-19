@@ -1,5 +1,5 @@
 
-import { Container, Typography, Button, Grid } from '@mui/material';
+import { Container, Typography, Button, Grid, Divider } from '@mui/material';
 import backgroundImage from '../../assets/foodhero.jpg'; // Import your background image
 import NavBar from '../NavBar/NavBar';
 
@@ -8,8 +8,13 @@ const containerStyle = {
   backgroundImage: `url(${backgroundImage})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  minHeight: '50vh', // Corrected from '50dvh' to '50vh'
+  minHeight: '90vh', 
   padding: '8rem 0 6rem',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+
 };
 
 const overlayStyle = {
@@ -37,7 +42,8 @@ const textSecondaryStyle = {
 const HeroContainer = () => {
   return (
     <Container maxWidth="xl" sx={containerStyle}>
-      <NavBar/>
+       <NavBar/>
+      <Divider />
       <Container maxWidth="xl" sx={overlayStyle} />
       <Container maxWidth="sm">
     
@@ -52,11 +58,6 @@ const HeroContainer = () => {
             <Grid item>
               <Button variant="contained" color="primary">
                 Learn More
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button variant="outlined" color="primary">
-                Contact Us
               </Button>
             </Grid>
           </Grid>

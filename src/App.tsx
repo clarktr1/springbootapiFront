@@ -1,12 +1,12 @@
-import Home from './components/Home/home'
+import RoutesList from "./Routes"
 
 function App() {
  
 
   return (
     <>
-      
-      <Home/>
+ 
+     <RoutesList />
     </>
   )
 }

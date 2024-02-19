@@ -10,13 +10,13 @@ import pizza from "../../assets/foods/pizza.png";
 
 
 const categories = [
-    { name: 'Burgers', image: burger, link: '/' },
-    { name: 'American', image: american, link: '/' },
-    { name: 'Fast Food', image: fastfood, link: '/' },
-    { name: 'Breakfast', image: breakfast, link: '/' },
-    { name: 'Chinese', image: chinese, link: '/' },
-    { name: 'Sandwhich', image: sandwich, link: '/' },
-    { name: 'Pizza', image: pizza, link: '/x  '},
+    { name: 'Burgers', image: burger, link: '/genre/burgers' },
+    { name: 'American', image: american, link: '/genre/american' },
+    { name: 'Fast Food', image: fastfood, link: '/genre/fastfood' },
+    { name: 'Breakfast', image: breakfast, link: '/genre/breakfast' },
+    { name: 'Chinese', image: chinese, link: '/genre/chinese' },
+    { name: 'Mexican', image: sandwich, link: '/genre/mexican' },
+    { name: 'Italian', image: pizza, link: '/genre/italian'},
   ];
 
 export default function GenreContainer(){
