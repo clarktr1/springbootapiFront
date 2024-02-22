@@ -9,7 +9,17 @@ type Restaurant = {
 }
 
 
+const buttonStlye ={
+  backgroundColor: '#E72A01',
+  color: 'white',
+  '&:hover': {
+      backgroundColor: '#E9664A',
+  },
+  margin: '0 5px'
+}
+
 export default function RestaurantCard({image, name, overallScore, genre} : Restaurant) {
+  
 
   let stars = "";
   (function popStars(){
@@ -25,7 +35,7 @@ export default function RestaurantCard({image, name, overallScore, genre} : Rest
     <Typography sx={{marginTop:"2rem"}} variant={name.length > 20 ? 'h6' : 'h4'}>{name}</Typography>
     <Typography sx={{marginTop:"1rem"}}>{genre}</Typography>
     <Typography sx={{margin:"0.8rem"}}>{ stars}  {overallScore +" / 5"} </Typography>
-    <Button variant='contained'>Write a Review!</Button>
+    <Button href={`/restaurant/${name}`} variant='contained' sx={buttonStlye}>Visit Restaurant</Button>
   </CardContent>
 </Card>
 

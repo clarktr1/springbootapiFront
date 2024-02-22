@@ -15,7 +15,6 @@ const containerStyle = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-
 };
 
 const overlayStyle = {
@@ -26,6 +25,15 @@ const overlayStyle = {
     width: '100%',
     backgroundImage: 'linear-gradient(to bottom, rgba(25,25,25,0.75), rgba(120,120,120,0.3))', 
   };
+
+  const buttonStlye ={
+    backgroundColor: '#E72A01',
+    color: 'white',
+    '&:hover': {
+        backgroundColor: '#E9664A',
+    },
+    margin: '0 5px'
+}
   
 
 const textPrimaryStyle = {
@@ -57,7 +65,7 @@ const HeroContainer = () => {
         <div style={{ marginTop: '4rem' }}>
           <Grid container spacing={2} justifyContent="center">
             <Grid item>
-              <Button variant="contained" color="primary">
+              <Button variant="contained" sx={buttonStlye}>
                 Learn More
               </Button>
             </Grid>
